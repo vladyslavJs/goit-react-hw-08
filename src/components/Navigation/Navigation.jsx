@@ -3,11 +3,12 @@ import { useSelector } from 'react-redux';
 import { selectIsLoggedIn } from '../../redux/auth/selectors';
 import CustomLink from '../CustomNavLink/CustomNavLink';
 
+
 const Navigation = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
 
   return (
-    <div className={css.nav}>
+    <div className={css.container}>
       <CustomLink to="/">Home</CustomLink>
       {isLoggedIn && <CustomLink to="/contacts">Contacts</CustomLink>}
     </div>
