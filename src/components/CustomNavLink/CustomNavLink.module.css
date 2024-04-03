@@ -1,0 +1,11 @@
+.link {
+    font-size: 22px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #808080;
+    cursor: pointer;
+}
+
+.isActive {
+    color:#5e270b;
+}
