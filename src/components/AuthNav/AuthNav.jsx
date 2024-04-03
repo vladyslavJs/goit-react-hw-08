@@ -1,11 +1,11 @@
-import c from './AuthNav.module.css';
+import css from './AuthNav.module.css';
 import CustomLink from '../CustomNavLink/CustomNavLink';
 
 const AuthNav = () => {
   return (
-    <div className={c.nav}>
-      <CustomLink to="/register">Sign up</CustomLink>
+    <div className={css.nav}>
       <CustomLink to="/login">Log in</CustomLink>
+      <CustomLink to="/register">Register</CustomLink>
     </div>
   );
 };
