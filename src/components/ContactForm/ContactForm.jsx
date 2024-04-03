@@ -1,6 +1,6 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import c from './ContactForm.module.css';
+import css from './ContactForm.module.css';
 import { useDispatch } from 'react-redux';
 import { addContact } from '../../redux/contacts/operations';
 import Button from '@mui/material/Button';
@@ -34,7 +34,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className={c.container}>
+    <div className={css.container}>
       <ThemeProvider theme={defaultTheme}>
         <Container component="main" maxWidth="xs">
           <CssBaseline />
@@ -62,7 +62,7 @@ const ContactForm = () => {
                         name="name"
                         autoComplete="name"
                       />
-                      <ErrorMessage name="name" className={c.error} component="div" />
+                      <ErrorMessage name="name" className={css.error} component="div" />
                     </Grid>
                     <Grid item xs={12}>
                       <Field
@@ -73,7 +73,7 @@ const ContactForm = () => {
                         id="number"
                         autoComplete="new-number"
                       />
-                      <ErrorMessage name="number" className={c.error} component="div" />
+                      <ErrorMessage name="number" className={css.error} component="div" />
                     </Grid>
                   </Grid>
                   <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }}>
