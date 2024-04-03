@@ -1,6 +1,6 @@
 import { IoPerson } from 'react-icons/io5';
 import { FaPhoneAlt } from 'react-icons/fa';
-import c from './Contact.module.css';
+import css from './Contact.module.css';
 import { useDispatch } from 'react-redux';
 import { deleteContact, editContact } from '../../redux/contacts/operations';
 import { useState } from 'react';
@@ -40,7 +40,7 @@ const Contact = ({ contact: { name, number, id } }) => {
   };
 
   const handleDelete = () => {
-    // if (confirm('Are you sure you want to delete this contact?')) {
+    if (confirm('Are you sure you want to delete this contact?')) {
     dispatch(deleteContact(id))
       .unwrap()
       .catch(() =>
@@ -48,7 +48,7 @@ const Contact = ({ contact: { name, number, id } }) => {
           id: 'deleteError',
         })
       );
-    // }
+    }
   };
 
   const handleEdit = () => {
@@ -66,9 +66,9 @@ const Contact = ({ contact: { name, number, id } }) => {
   };
 
   return (
-    <div className={c.contact}>
-      <div className={c.info}>
-        <div className={c.icons}>
+    <div className={css.contact}>
+      <div className={css.info}>
+        <div className={css.icons}>
           <IoPerson />
           <FaPhoneAlt />
         </div>
@@ -80,11 +80,11 @@ const Contact = ({ contact: { name, number, id } }) => {
               validationSchema={validationSchema}
             >
               <Form>
-                <div className={c.formBox}>
-                  <div className={c.fields}>
+                <div className={css.formBox}>
+                  <div className={css.fields}>
                     <Field
                       name="name"
-                    //   as={TextField}
+                      as={TextField}
                       size="small"
                       id="standard-basic"
                       variant="standard"
@@ -97,11 +97,11 @@ const Contact = ({ contact: { name, number, id } }) => {
                       variant="standard"
                     />
                   </div>
-                  <div className={c.formButtonsBox}>
-                    <button className={c.formBtn} type="submit">
+                  <div className={css.formButtonsBox}>
+                    <button className={css.formBtn} type="submit">
                       <MdDone size={20} />
                     </button>
-                    <button onClick={() => setIsEdited(false)} className={c.formBtn} type="button">
+                    <button onClick={() => setIsEdited(false)} className={css.formBtn} type="button">
                       <MdClose size={20} />
                     </button>
                   </div>
@@ -109,7 +109,7 @@ const Contact = ({ contact: { name, number, id } }) => {
               </Form>
             </Formik>
           ) : (
-            <div className={c.data}>
+            <div className={css.data}>
               <p>{name}</p>
               <p>{number}</p>
             </div>
@@ -150,7 +150,7 @@ const Contact = ({ contact: { name, number, id } }) => {
                 handleEdit();
               }}
             >
-              <div className={c.menuItem}>
+              <div className={css.menuItem}>
                 <div>Edit</div>
                 <div>
                   <MdEdit size={20} />
@@ -163,7 +163,7 @@ const Contact = ({ contact: { name, number, id } }) => {
                 handleDelete();
               }}
             >
-              <div className={c.menuItem}>
+              <div className={css.menuItem}>
                 <div>Delete</div>
                 <div>
                   <MdDelete size={20} />

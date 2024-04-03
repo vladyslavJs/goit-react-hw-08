@@ -1,0 +1,55 @@
+.contact {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+.info {
+    align-items: center;
+    gap: 10px;
+    display: flex;
+}
+
+.icons {
+    flex-direction: column;
+    gap: 8px;
+    display: flex;
+}
+
+.data {
+    flex-direction: column;
+    display: flex;
+}
+
+.menuItem {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    line-height: 0;
+    display: flex;
+}
+
+.formBox {
+    align-items: end;
+    justify-content: space-between;
+    gap: 30px;
+    display: flex;
+}
+
+.fields {
+    flex-direction: column;
+    gap: 4px;
+    display: flex;
+}
+
+.formButtonsBox {
+    flex-direction: column;
+    gap: 2px;
+    display: flex;
+}
+
+.formBtn {
+    background-color: transparent;
+    border: none;
+    line-height: 0;
+}
