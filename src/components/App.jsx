@@ -8,6 +8,7 @@ import PrivateRoute from './PrivateRoute';
 import { selectIsRefreshing } from '../redux/auth/selectors';
 import Layout from './Layout/Layout';
 
+
 const Home = lazy(() => import('../pages/Home/Home'));
 const ContactsPage = lazy(() => import('../pages/Contacts/Contacts'));
 const Registration = lazy(() => import('../pages/Registration'));

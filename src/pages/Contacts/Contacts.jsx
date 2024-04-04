@@ -6,8 +6,9 @@ import ContactForm from '../../components/ContactForm/ContactForm';
 import SearchBox from '../../components/SearchBox/SearchBox';
 import Loader from '../../components/Loader/Loader';
 import ContactList from '../../components/ContactList/ContactList';
-// import css from './Contacts.module.css';
+import css from './Contacts.module.css';
 import toast from 'react-hot-toast';
+import { IoIosPersonAdd } from "react-icons/io";
 
 const Contacts = () => {
   const dispatch = useDispatch();
@@ -26,7 +27,7 @@ const Contacts = () => {
 
   return (
     <div>
-      <div>Contacts</div>
+      <p className={css.title}>Here you can add a contact and manage them easily <IoIosPersonAdd /></p>
       <div>
         <ContactForm />
         <SearchBox />

@@ -5,7 +5,7 @@ import { FcServices } from "react-icons/fc";
 
 const Home = () => {
     return (
-        <div className={css.container}>
+        <div>
             <div className={css.title}>
                 <h1><FcServices />Welcome to our homepage!</h1>
                 <p>

@@ -51,7 +51,6 @@ const UserMenu = () => {
     }
   }
 
-  // return focus to the button when we transitioned from !open -> open
   const prevOpen = React.useRef(open);
   React.useEffect(() => {
     if (prevOpen.current === true && open === false) {
@@ -61,7 +60,7 @@ const UserMenu = () => {
   }, [open]);
 
   return (
-    <div className={css.wrapper}>
+    <div className={css.user}>
       <Stack direction="row" spacing={2}>
         <div>
           <Button
@@ -72,7 +71,7 @@ const UserMenu = () => {
             aria-haspopup="true"
             onClick={handleToggle}
           >
-            <CgProfile size={24} color="#000" />
+            <CgProfile size={24} color="#FF4500" />
           </Button>
           <Popper
             open={open}

@@ -2,10 +2,10 @@
     font-size: 22px;
     font-weight: 600;
     text-decoration: none;
-    color: #808080;
+    color: #333131;
     cursor: pointer;
 }
 
 .isActive {
-    color:#5e270b;
+    color:#FF4500;
 }

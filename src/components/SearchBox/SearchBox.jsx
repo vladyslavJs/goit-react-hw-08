@@ -14,9 +14,9 @@ const SearchBox = () => {
 
   return (
     <div className={css.container}>
-      <TextField
+      <TextField 
         id="standard-basic"
-        label="Search"
+        label="Search 🔍"
         variant="standard"
         size="normal"
         value={value}
